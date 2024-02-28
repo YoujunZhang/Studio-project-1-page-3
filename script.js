@@ -1,3 +1,3 @@
 function myFunction() {
-    location.replace("http://127.0.0.1:5504/")
+    location.replace("https://youjunzhang.github.io/Studio-project-1-page-4//")
   }
