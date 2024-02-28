@@ -1,0 +1,362 @@
+
+  span:hover {
+    /* text-shadow:1px 1px 6px #fff;  */
+    filter: blur(1px);
+    animation-name: front;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    /* color: blanchedalmond; */
+    /* transition-delay: 12s; */
+  }
+
+  
+  @keyframes front { 
+    0% { 
+      letter-spacing: 2px; 
+        
+    } 
+
+
+    20% { 
+        letter-spacing: 150px; 
+    } 
+
+    100% { 
+      letter-spacing: 160px; 
+      transition: smooth;
+    } 
+} 
+  
+    
+  
+    div {
+      position:fixed;
+      font-size: 15px;
+      padding: 40px;
+      margin: 30px;
+      text-align: justify;
+      letter-spacing: 30px;
+      /* margin-top: 125px; */
+    }
+
+
+  
+  
+    body{
+      /* Used to enable scrolling */
+      /* background-image: linear-gradient(rgb(46, 46, 255),rgb(4, 4, 97)) */
+      /* linear-gradient(55deg, rgb(7, 7, 116) 0%, #1815cd 51%, rgb(34, 58, 145) 85%); */
+      
+      background: linear-gradient(270deg, #005fe3, #0036bb, #001556);
+      background-size: 600% 600%;
+  
+      -webkit-animation: AnimationName 36s ease infinite;
+      -moz-animation: AnimationName 36s ease infinite;
+      animation: AnimationName 36s ease infinite;
+      
+    }
+
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  
+  
+    
+  
+    #blur{
+      font-size: 15px;
+      color: transparent;
+      text-shadow: 0 0 3px rgb(202, 177, 35);
+      font-weight: 100; 
+              opacity: 1; 
+              animation: animate 3s ease-out forwards; 
+              /* animation-delay: 1s;  */
+        margin-top: 125px;
+    }
+  
+  
+  
+    span {
+      margin-top: -10px;
+      /* display: block; */
+      color: blanchedalmond;
+      /* text-decoration:line-through; */
+      text-shadow: 0 0 8px #ffffff;
+      animation-name: cross-fade-blur;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.04s;
+        }
+      }
+    }
+  
+  
+ 
+    
+/*     
+    body #one {
+      animation: test 13s linear;
+    }
+    
+    body #two {
+      animation: test 12s linear;
+    }
+    
+    body #three {
+      animation: test 11s linear;
+    }
+    
+    body #four {
+      animation: test 12s linear;
+    }
+    
+    body #five {
+      animation: test 12s linear;
+    }
+  
+    body #six {
+        animation: test 11s linear;
+      }
+      
+    body #seven {
+        animation: test 12s linear;
+      }
+      
+    body #eight {
+        animation: test 12s linear;
+    } */
+  
+  
+    @keyframes animate { 
+      0% { 
+          letter-spacing: 0px; 
+          transition: smooth;
+          margin-top: 0px;
+      } 
+
+  
+      20% { 
+          letter-spacing: 60px; 
+          margin-top: 0px;
+      } 
+  
+      100% { 
+          letter-spacing: 2px; 
+      } 
+  } 
+
+
+
+  .scroll-container {
+    width: 350px;
+    height: 200px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    margin-top: 110px;
+    margin-left: -140px;
+    color: darkblue;
+  }
+  .scroll-page {
+    /* font-size: 15px;
+    color: transparent;
+    text-shadow: 0 0 3px rgb(202, 177, 35);
+    font-weight: 100; 
+            opacity: 1; 
+            animation: animate 3s ease-out forwards; 
+            animation-delay: 1s;  */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+      
+  }
+
+  @keyframes example{ 
+    0% { 
+        letter-spacing: 0px; 
+        transition: smooth;
+        margin-top: 0px;
+    } 
+
+
+    20% { 
+        letter-spacing: 60px; 
+        margin-top: 0px;
+       
+    } 
+
+    100% { 
+        letter-spacing: 2px; 
+    } 
+} 
+
+  
+
+
+
+
+p {
+  /* list-style: none;
+  font-weight: bold;
+  font-size: 4em;
+  letter-spacing: 25px;
+  filter: blur(1px); */
+  transition: all 2s;
+  
+  &:hover, &:hover ~ li {
+    transform: rotate(20deg) translatey(-20px);
+    opacity: 0;
+    filter: blur(20px);
+    
+  }
+}
+
+
+
+body {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ul {
+  display:flex;
+  
+
+  
+  
+  li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 25px;
+    filter: blur(1px);
+    transition: all 2s;
+    
+    &:hover, &:hover ~ li {
+      transform: rotate(20deg) translatey(-20px);
+      opacity: 0;
+      filter: blur(20px);
+    }
+  }
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  /* text-decoration: underline; */
+  display: flex;
+  margin-left: 540px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 60%;
+  height: 10px;
+  border-radius: 25px;
+  letter-spacing: 36px;
+
+}
+
+
+
+
+
+#star{
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+  animation-name: star;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes star{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+
+}
+
+
+
+
+#nextpage2{
+  color: blanchedalmond;
+    /* text-decoration:line-through; */
+    text-shadow: 0 0 8px #fff;
+    font-size: 14px;
+    margin-top: 20px;
+
+}
+
+
+#nextpage{
+  animation: glow 1.5s ease-in-out infinite alternate;
+  /* animation-delay: 30s; */
+  margin-top: 0px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px lightgoldenrodyellow, 0 0 25px lightgoldenrodyellow, 0 0 30px lightgoldenrodyellow, 0 0 35px lightgoldenrodyellow, 0 0 40px lightgoldenrodyellow;
+  }
+  
+  to {
+    text-shadow: 0 0 12px #fff, 0 0 17px blanchedalmond, 0 0 22px blanchedalmond, 0 0 27px blanchedalmond, 0 0 32px blanchedalmond, 0 0 37px blanchedalmondue;
+    opacity: 0.8;
+  }
+}
+
+
+#nextpage:hover{
+  text-shadow: 1px 0px 2px lightgoldenrodyellow; 
+  color: transparent;
+  filter: blur(10px);
+  font-size: 122px;
+  transition-duration: 1s;
+}#nextpage{
+  animation: glow 1.5s ease-in-out infinite alternate;
+  animation-delay: 30s;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px lightgoldenrodyellow, 0 0 25px lightgoldenrodyellow, 0 0 30px lightgoldenrodyellow, 0 0 35px lightgoldenrodyellow, 0 0 40px lightgoldenrodyellow;
+  }
+  
+  to {
+    text-shadow: 0 0 12px #fff, 0 0 17px blanchedalmond, 0 0 22px blanchedalmond, 0 0 27px blanchedalmond, 0 0 32px blanchedalmond, 0 0 37px blanchedalmondue;
+    opacity: 0.8;
+  }
+}
+
+
+#nextpage:hover{
+  text-shadow: 1px 0px 2px lightgoldenrodyellow; 
+  color: transparent;
+  filter: blur(10px);
+  font-size: 122px;
+  transition-duration: 1s;
+}
